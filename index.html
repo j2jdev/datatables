@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+
+<head>
+    <title>datatables</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- dataTables.bootstrap4 -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+    <!-- Sarabun google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Sarabun&display=swap" rel="stylesheet">
+</head>
+
+<body ng-controller="ControllerCtrl" style="font-family: 'Sarabun', sans-serif;">
+    <div class="container my-5">
+        <table ng-if="data.length" datatable="ng" class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>เลขครุภัณฑ์</th>
+                    <th>ชื่อครุภัณฑ์</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="d in data">
+                    <td>{{d.code}}</td>
+                    <td>{{d.items_name}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- angularjs -->
+    <script src="./node_modules/angular/angular.min.js"></script>
+    <script src="./node_modules/angular-route/angular-route.min.js"></script>
+    <!-- datatables -->
+    <script src="./node_modules/angular-datatables/dist/angular-datatables.min.js"></script>
+    <script src="./node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
+    <!-- dataTables.bootstrap4 -->
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <!-- module -->
+    <script src="./src/module.js"></script>
+    <!-- controller -->
+    <script src="./src/controller.js"></script>
+</body>
+
+</html>
